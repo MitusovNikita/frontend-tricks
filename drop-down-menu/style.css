@@ -1,0 +1,15 @@
+.list {
+    list-style-type: none;
+}
+
+.list > li {
+    display: inline;
+    position: relative;
+}
+
+.list-submenu {
+    list-style-type: none;
+    position: absolute;
+    left:0;
+    padding: 0;
+}

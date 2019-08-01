@@ -1,0 +1,35 @@
+.block {
+    background-color: green;
+    border: 1px solid black;
+}
+
+.parent {
+    display: grid;
+    /*габариты столбцов(резиновые)*/
+    grid-template-columns: minmax(100px,250px) 2fr 1fr 50px;
+    /*габариты строк*/
+    grid-template-rows: 100px 150px;
+    /*габариты строк по умолчанию*/
+    grid-auto-rows: 50px;
+    /*расстояние между блоками*/
+    grid-gap: 10px;
+
+    /*повтор по коллонкам*/
+    /* grid-template-columns: repeat(2,1fr 2fr); */
+    /*порядок по столбцам*/
+    /* grid-auto-flow: column; */
+    /*автозаполнение*/
+    /* grid-template-columns: repeat(auto-fit, minmax(100px,1fr)); */
+
+}
+
+/*дальнейшее управление именованными grid*/
+.area {
+    grid-area: area;
+}
+
+@media (max-width: 640px) {
+    .parent {
+        grid-template-columns:  1fr 1fr;
+    }
+}
